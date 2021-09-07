@@ -10,7 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calculator">
         <activity
-            android:name=".MainActivity"
+            android:name=".controller.TranActivity"
+            android:label="@string/title_activity_tran"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".controller.FunctionActivity"
+            android:label="@string/title_activity_function"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".controller.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
