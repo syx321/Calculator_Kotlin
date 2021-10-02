@@ -31,4 +31,6 @@
     <string name="m2">立方米</string>
     <string name="dm2">立方分米</string>
     <string name="cm2">立方厘米</string>
+    <string name="help">help</string>
+    <string name="exit">exit</string>
 </resources>

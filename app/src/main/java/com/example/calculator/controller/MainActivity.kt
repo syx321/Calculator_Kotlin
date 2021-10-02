@@ -1,10 +1,16 @@
 package com.example.calculator.controller
 
+import android.content.ClipData
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.menu.MenuItemImpl
 import com.example.calculator.model.Calculate
 import com.example.calculator.R
 import com.example.calculator.util.ButtonState
@@ -22,6 +28,24 @@ class MainActivity : AppCompatActivity() {
         calculate = Calculate()
 
         this.initAllCListener()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.help -> {
+                Toast.makeText(this,"这是帮助",Toast.LENGTH_SHORT).show()
+            }
+            R.id.exit -> {
+                android.os.Process.killProcess(android.os.Process.myPid())
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater = menuInflater
+        inflater.inflate(R.menu.menu,menu)
+        return super.onCreateOptionsMenu(menu)
     }
 
     private fun initAllCListener() {
