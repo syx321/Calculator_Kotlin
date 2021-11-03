@@ -6,7 +6,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="vertical">
 
         <EditText
@@ -76,17 +77,9 @@
         </RadioGroup>
     </LinearLayout>
 
-    
-        
-
-    
-
-
-
-
     <EditText
         android:id="@+id/volume_value_text"
-        android:hint="请输入长度"
+        android:hint="请输入体积"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -123,7 +116,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="0dp"
+        android:layout_weight="1">
         <RadioGroup
             android:id="@+id/volume_results"
             android:layout_width="match_parent"
@@ -146,5 +140,4 @@
                 android:text="@string/cm2"/>
         </RadioGroup>
     </LinearLayout>
-
 </LinearLayout>
